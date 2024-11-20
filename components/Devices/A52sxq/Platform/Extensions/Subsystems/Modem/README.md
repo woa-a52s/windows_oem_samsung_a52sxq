@@ -1,0 +1,2 @@
+- Deleted qcmpss7280_gps.mbn
+- Removed related GPS entries in extension .inf, since IDP/QRD doesn't have it.

@@ -1,0 +1,3 @@
+[submodule "components/QC7325"]
+	path = components/QC7325
+	url = https://github.com/woa-a52s/windows_silicon_qcom_kodiak

@@ -1,0 +1,2 @@
+* !text !filter !merge !diff
+Platform/Drivers/Graphics/DXKM/qcdxwsaum.img filter=lfs diff=lfs merge=lfs -text
