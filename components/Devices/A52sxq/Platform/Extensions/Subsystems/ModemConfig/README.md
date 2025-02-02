@@ -1,3 +1,0 @@
-- Deleted qdsp6m_gps.qdb
-- Removed related GPS entries in extension .inf, since IDP/QRD doesn't have it
-- Removed QSIP reated entries in extension .inf and only left out AMSS_NON_QSIP, since IDP/QRD doesn't have it
