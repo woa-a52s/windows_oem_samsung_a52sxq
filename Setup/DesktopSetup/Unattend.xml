@@ -27,16 +27,27 @@
       </OEMInformation>
       <FirstLogonCommands>
         <SynchronousCommand>
-          <Description>Commands </Description>
+          <Description>OOBE Commands 1</Description>
           <Order>1</Order>
           <CommandLine>%WINDIR%\System32\mountvol.exe D: /d</CommandLine>
         </SynchronousCommand>
-        <SynchronousCommand>
-          <Description>OOBE Commands</Description>
+		<SynchronousCommand>
+          <Description>OOBE Commands 2</Description>
           <Order>2</Order>
+          <CommandLine>%WINDIR%\System32\powercfg.exe /hibernate off</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand>
+          <Description>OOBE Commands 3</Description>
+          <Order>3</Order>
           <CommandLine><![CDATA[powershell -ExecutionPolicy RemoteSigned %SystemDrive%\Users\Default\AppData\Local\Samsung\OOBE\ImageConfiguration.ps1]]></CommandLine>
         </SynchronousCommand>
       </FirstLogonCommands>
+	  <Themes>
+        <ThemeName>Galaxy</ThemeName>
+        <UWPAppsUseLightTheme>false</UWPAppsUseLightTheme>
+        <SystemUsesLightTheme>false</SystemUsesLightTheme>
+        <DesktopBackground>%WINDIR%\web\wallpaper\oem\Samsung\Next_Gen_AI_PC_OLED_8K.JPG</DesktopBackground>
+      </Themes>
     </component>
     <component name="Microsoft-Windows-TabletPC-Platform-Input-Core" processorArchitecture="arm64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
       <TouchKeyboardAutoInvokeEnabled>True</TouchKeyboardAutoInvokeEnabled>

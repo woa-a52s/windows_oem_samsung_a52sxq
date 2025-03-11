@@ -1,4 +1,8 @@
 {
+	"model": {
+    "family": "Galaxy",
+    "shortSku": "A52s"
+  },
   "capabilities": {
     "fwVersion": {
       "name": "fwVersion",

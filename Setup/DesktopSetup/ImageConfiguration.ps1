@@ -13,6 +13,18 @@ function ImageConfig {
 
     Write-Host "> Prune extra Office languages to save space"
     & "${env:CommonProgramFiles}\Microsoft Shared\ClickToRun\OfficeClickToRun.exe" scenario=CULTUREREFRESH RemoveNonClientCultures=True displaylevel=False
+	
+    # Disable Windows Update Services
+    #Write-Host "> Disabling Windows Update services..."
+    #Stop-Service -Name wuauserv -Force -ErrorAction SilentlyContinue
+    #Set-Service -Name wuauserv -StartupType Disabled
+
+    #Stop-Service -Name WaaSMedicSvc -Force -ErrorAction SilentlyContinue
+    #Set-Service -Name WaaSMedicSvc -StartupType Disabled
+
+    #Write-Host "> Disabling Windows Update registry settings..."
+    #New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Force | Out-Null
+    #Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoUpdate" -Type DWord -Value 1
 
     #Clean up
     #Remove-Item -LiteralPath $MyInvocation.MyCommand.Path -Force -ErrorAction Ignore
